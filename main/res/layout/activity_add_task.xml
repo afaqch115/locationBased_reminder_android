@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.add_task">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:background="#8dd3ec"
+            android:minHeight="?attr/actionBarSize"
+            android:id="@+id/toolbar"
+            app:theme="@style/Toolbar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="70dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="Title"
+            android:textAllCaps="true"
+            android:textColor="#8dd3ec"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/title_name"
+            android:layout_width="371dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/title"
+            android:backgroundTint="#8dd3ec"
+            android:ems="10"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:hint="Title"
+            android:inputType="textPersonName"
+            android:padding="5dp" />
+
+        <TextView
+            android:id="@+id/decription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/title"
+            android:layout_marginTop="87dp"
+            android:text="Description"
+            android:textColor="#8dd3ec"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+        <EditText
+            android:id="@+id/detail"
+            android:layout_width="371dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/decription"
+            android:backgroundTint="#8dd3ec"
+            android:ems="10"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:hint="Detail"
+            android:inputType="textPersonName"
+            android:padding="5dp" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="170dp"
+            android:src="@drawable/ic_action_location1" />
+
+        <TextView
+            android:id="@+id/location_text"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="55dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="185dp"
+            android:backgroundTint="#8dd3ec"
+            android:hint="Pick Location"
+            android:inputType="textMultiLine" />
+
+        <ImageView
+            android:id="@+id/map_view"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="330dp"
+            android:layout_marginTop="170dp"
+            android:src="@drawable/ic_action_serach" />
+
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="88dp"
+            android:background="#8dd3ec"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="save"
+            android:textColor="@android:color/white" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

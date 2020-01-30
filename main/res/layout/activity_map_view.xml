@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.Map_view">
+
+    <fragment
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/map"
+        tools:context=".view.Map_view"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+    />
+
+    <RelativeLayout
+        android:id="@+id/rellayout1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/white_boarder"
+        android:elevation="10dp">
+
+        <ImageView
+            android:id="@+id/magnify"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_action_magnify"
+
+            />
+
+        <AutoCompleteTextView
+            android:id="@+id/search_input"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/magnify"
+            android:background="@null"
+            android:layout_marginLeft="10dp"
+            android:hint="Enter City, Address or Zip Code. "
+            android:textColor="#000"
+            android:textSize="15sp"
+            android:singleLine="true"
+            android:imeOptions="actionSearch"/>
+
+    </RelativeLayout>
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/rellayout1"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:scaleType="centerCrop"
+        android:id="@+id/gps"
+        android:src="@drawable/ic_action_gps"
+        />
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/place_picker"
+        android:layout_below="@+id/rellayout1"
+        android:src="@drawable/ic_places"
+        />
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/place_picker"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/info_window"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_info_window"/>
+    <Button
+        android:id="@+id/loc_select"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Pick This Place"/>
+</RelativeLayout>
